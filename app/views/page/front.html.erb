@@ -1,0 +1,11 @@
+<h1>Home</h1>
+<p>Facebook Info Below</p>
+<div id="user-widget">
+  <% if @current_user %>
+    Welcome <strong><%= @current_user.name %></strong>!
+    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+  <% else %>
+    
+  <%= link_to "Sign in", new_user_session_path %>
+  <% end %>
+</div>
